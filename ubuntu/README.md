@@ -14,6 +14,8 @@ WARNING:
 
 -->
 
+**Note:** this is the "per-architecture" repository for the `s390x` builds of [the `ubuntu` official image](https://hub.docker.com/_/ubuntu) -- for more information, see ["Architectures other than amd64?" in the official images documentation](https://github.com/docker-library/official-images#architectures-other-than-amd64) and ["An image's source changed in Git, now what?" in the official images FAQ](https://github.com/docker-library/faq#an-images-source-changed-in-git-now-what).
+
 # Quick reference
 
 -	**Maintained by**:  
@@ -24,12 +26,13 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`18.04`, `bionic-20210416`, `bionic`](https://github.com/tianon/docker-brew-ubuntu-core/blob/4b7cb6f04bc4054f9ab1fa42b549caa1a41b7c92/bionic/Dockerfile)
--	[`20.04`, `focal-20210416`, `focal`, `latest`](https://github.com/tianon/docker-brew-ubuntu-core/blob/4b7cb6f04bc4054f9ab1fa42b549caa1a41b7c92/focal/Dockerfile)
--	[`20.10`, `groovy-20210416`, `groovy`](https://github.com/tianon/docker-brew-ubuntu-core/blob/4b7cb6f04bc4054f9ab1fa42b549caa1a41b7c92/groovy/Dockerfile)
--	[`21.04`, `hirsute-20210422`, `hirsute`, `rolling`, `devel`](https://github.com/tianon/docker-brew-ubuntu-core/blob/4b7cb6f04bc4054f9ab1fa42b549caa1a41b7c92/hirsute/Dockerfile)
--	[`14.04`, `trusty-20191217`, `trusty`](https://github.com/tianon/docker-brew-ubuntu-core/blob/4b7cb6f04bc4054f9ab1fa42b549caa1a41b7c92/trusty/Dockerfile)
--	[`16.04`, `xenial-20210416`, `xenial`](https://github.com/tianon/docker-brew-ubuntu-core/blob/4b7cb6f04bc4054f9ab1fa42b549caa1a41b7c92/xenial/Dockerfile)
+-	[`18.04`, `bionic-20210416`, `bionic`](https://github.com/tianon/docker-brew-ubuntu-core/blob/a3dad9e5ee57e0f55c68b5f0e4dc1456789b4d6c/bionic/Dockerfile)
+-	[`20.04`, `focal-20210416`, `focal`, `latest`](https://github.com/tianon/docker-brew-ubuntu-core/blob/a3dad9e5ee57e0f55c68b5f0e4dc1456789b4d6c/focal/Dockerfile)
+-	[`20.10`, `groovy-20210416`, `groovy`](https://github.com/tianon/docker-brew-ubuntu-core/blob/a3dad9e5ee57e0f55c68b5f0e4dc1456789b4d6c/groovy/Dockerfile)
+-	[`21.04`, `hirsute-20210422`, `hirsute`, `rolling`, `devel`](https://github.com/tianon/docker-brew-ubuntu-core/blob/a3dad9e5ee57e0f55c68b5f0e4dc1456789b4d6c/hirsute/Dockerfile)
+-	[`16.04`, `xenial-20210416`, `xenial`](https://github.com/tianon/docker-brew-ubuntu-core/blob/a3dad9e5ee57e0f55c68b5f0e4dc1456789b4d6c/xenial/Dockerfile)
+
+[![s390x/ubuntu build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/s390x/job/ubuntu.svg?label=s390x/ubuntu%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/ubuntu/)
 
 # Quick reference (cont.)
 
@@ -64,9 +67,9 @@ Development of Ubuntu is led by Canonical Ltd. Canonical generates revenue throu
 
 This image is built from official rootfs tarballs provided by Canonical (specifically, https://partner-images.canonical.com/core/).
 
-The `ubuntu:latest` tag points to the "latest LTS", since that's the version recommended for general use. The `ubuntu:rolling` tag points to the latest release (regardless of LTS status).
+The `s390x/ubuntu:latest` tag points to the "latest LTS", since that's the version recommended for general use. The `s390x/ubuntu:rolling` tag points to the latest release (regardless of LTS status).
 
-Along a similar vein, the `ubuntu:devel` tag is an alias for whichever release the "devel" suite on the mirrors currently points to, as determined by the following one-liner: `wget -qO- http://archive.ubuntu.com/ubuntu/dists/devel/Release | awk -F ': ' '$1 == "Codename" { print $2; exit }'`
+Along a similar vein, the `s390x/ubuntu:devel` tag is an alias for whichever release the "devel" suite on the mirrors currently points to, as determined by the following one-liner: `wget -qO- http://archive.ubuntu.com/ubuntu/dists/devel/Release | awk -F ': ' '$1 == "Codename" { print $2; exit }'`
 
 ## Locales
 
